@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+$eerie_black: #010101;
+$tropical_indigo: #AAAAAA;
+$mullberry: #AAAAAA;
+$earth_yellow: #E4B363;
+$anti-flash_white: #EBEBEB;
+$white: #FFFFFF;
+
+$hat_add: #53edfb;
+
+$family-sans-serif: 'Hack', monospace;
+
+$primary: $anti-flash_white;
+$dark: $eerie_black;
+$background: $anti-flash_white;
+$background-light: $anti-flash_white;
+$info: $mullberry;
+$warning: $earth_yellow;
+
+$footer-background-color: $anti-flash_white;
+
+@import 'bulma/bulma';
+@import 'bulma-calendar/src/sass/index';
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  background: transparent !important;
+}
+
+body {
+  min-height: 100vh;
+  background: transparent !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background-image: url('@/assets/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.section {
+  background: transparent !important;
+}
+
+.arrow-mixin {
+  @include arrow($eerie_black);
+}
